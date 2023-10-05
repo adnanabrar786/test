@@ -1,0 +1,226 @@
+@import "./Variable.module.scss";
+
+.slider {
+    padding: 0px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .slider_sub_container {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid #ccc; */
+        border-radius: 8px;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        .slider_heading_div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                button {
+                    cursor: pointer;
+                    width: 120px;
+                    height: 35px;
+                    background-color: #fff;
+                    border: 1px solid #000000;
+                    &:hover {
+                        color: #fff;
+                        background-color: #000000;
+                    }
+                }
+            }
+        }
+
+        .slider_item {
+            margin-top: 30px;
+            font-size: 24px;
+            /* font-weight: bold; */
+            display: flex;
+            width: 100%;
+            .slider_card_wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .slider_card {
+                    width: 24.5%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .slider_image {
+                        cursor: pointer;
+                        padding: 10px;
+                        width: 100%;
+                        min-height: 250px;
+                        max-height: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $babyPink;
+                        position: relative;
+                        h2 {
+                            display: none;
+                        }
+                        &:hover h2 {
+                            width: 100%;
+                            padding: 20px;
+                            position: absolute;
+                            bottom: 20px;
+                            font-size: 15px;
+                            cursor: pointer;
+                            background-color: white;
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+
+                    p {
+                        margin-top: 20px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .below_slider_item {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .sucess_btn_wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                .slider_button {
+                    margin: 0 10px;
+                    margin-top: 0px;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgb(245, 245, 245);
+
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    border-radius: 50%;
+
+                    .arrow_icon {
+                        color: rgb(109, 117, 116);
+                        margin: 10px;
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-xl-large) {
+    .slider {
+        padding: 0px 0px;
+        // width: 100%;
+        // display: flex;
+        // justify-content: center;
+
+        // .slider_sub_container {
+        //     width: 100%;
+        //     padding: 20px;
+        //     margin-top: 20px;
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        //     justify-content: center;
+        //     /* border: 1px solid #ccc; */
+        //     border-radius: 8px;
+        //     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+
+        //     .slider_item {
+        //         font-size: 24px;
+        //         /* font-weight: bold; */
+        //         padding: 20px;
+        //         display: flex;
+        //         width: 100%;
+        //         .slider_card_wrapper {
+        //             width: 100%;
+        //             display: flex;
+        //             justify-content: space-between;
+        //             .slider_card {
+        //                 width: 24.5%;
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 align-items: center;
+        //                 .slider_image {
+        //                     padding: 20px;
+        //                     width: 100%;
+        //                     min-height: 250px;
+        //                     max-height: auto;
+        //                     display: flex;
+        //                     justify-content: center;
+        //                     align-items: center;
+        //                     background-color: $babyPink;
+        //                 }
+
+        //                 p {
+        //                     margin-top: 20px;
+        //                     font-size: 13px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     // .below_slider_item {
+        //     //     margin-top: 30px;
+        //     //     width: 100%;
+        //     //     display: flex;
+        //     //     align-items: center;
+        //     //     justify-content: space-between;
+
+        //     //     .sucess_btn_wrapper {
+        //     //         display: flex;
+
+        //     //         .slider_button {
+        //     //             margin: 0 10px;
+        //     //             margin-top: 0px;
+        //     //             width: 50px;
+        //     //             height: 50px;
+        //     //             display: flex;
+        //     //             justify-content: center;
+        //     //             align-items: center;
+        //     //             background-color: rgb(245, 245, 245);
+
+        //     //             color: #fff;
+        //     //             border: none;
+        //     //             cursor: pointer;
+        //     //             transition: background-color 0.3s ease;
+        //     //             border-radius: 50%;
+
+        //     //             .arrow_icon {
+        //     //                 color: rgb(109, 117, 116);
+        //     //                 margin: 10px;
+        //     //                 &:hover {
+        //     //                     color: rgb(21, 33, 165);
+        //     //                 }
+        //     //             }
+        //     //         }
+        //     //     }
+        //     // }
+        // }
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .slider {
+        display: none;
+    }
+}
